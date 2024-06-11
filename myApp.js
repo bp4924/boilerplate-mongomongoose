@@ -3,12 +3,11 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 
-const uri =
-  "mongodb+srv://bp4924:SettMong49240@cluster0.wnsjjgv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const MONGO_URI = process.env.MONGO_URI;
 
 mongoose.set("debug", true);
 
-mongoose.connect(uri, {
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
