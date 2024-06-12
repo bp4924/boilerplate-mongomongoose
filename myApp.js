@@ -12,7 +12,7 @@ mongoose.connect(MONGO_URI, {
   useUnifiedTopology: true,
 });
 
-let Person;
+let Person = require("./personSchema");
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
